@@ -1,4 +1,4 @@
-* {
+ *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -12,9 +12,6 @@ body {
 	background-color: antiquewhite ;
 	text-align: center;
 }
-
-
-
 
 .wrapper{
 width: 90%;
@@ -122,10 +119,15 @@ button:hover{
 	line-height: 30px;
 	text-align: justify;
 	font-size: 23PX;
+	text-align: left;
+	
 }
 
 header .menu-toggle {
 	display: none;
+}
+.MySystem{
+	float: right;
 }
 
 

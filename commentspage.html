@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--custom_styling-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/9da9b46707.js"></script>
+    <link rel="stylesheet" href="commentspage.css">
+    <title>Comments</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="com">
+            <h1>BLOG COMMENTS</h1>
+            <p>Blogging is not about publishing content but also
+                two way communication and community building
+                aspects behind it.
+            </p>
+        </div>
+    </header>
+    <!--comments Page-->
+    <div class="comments_page">
+        <!--sub pages for comments-->
+        <div class="post_selection">
+            <h3>Leave a comment on:</h3><button>Select Post</button>
+            <h3 class="title">Title:</h3>
+            <input type="text" name="title">
+            <h3>Your Comment:</h3>
+            <textarea rows="4" cols="50" name="comment" form="usrform">
+              Enter text here...</textarea>
+            <button>Submit</button>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="comments-area">
+                    <h4>Comments on Post 1</h4>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Jhon</h5>
+                                    <p class="date">December 20, 2021 at 3:12 pm </p>
+                                    <p class="comment">
+                                        Never say goodbye till the end comes!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list left-padding">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Martin</h5>
+                                    <p class="date">December 22, 2021 at 10:12 pm </p>
+                                    <p class="comment">
+                                        I am Reply of above comment.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider-transparent"></div>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Martin</h5>
+                                    <p class="date">December 28, 2021at 4:12 pm </p>
+                                    <p class="comment">
+                                        Never say goodbye till the end comes!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="comments-area">
+                    <h4>Comments on Post 2</h4>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Jhon</h5>
+                                    <p class="date">December 20, 2021 at 3:12 pm </p>
+                                    <p class="comment">
+                                        Never say goodbye till the end comes!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list left-padding">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Martin</h5>
+                                    <p class="date">December 22, 2021 at 10:12 pm </p>
+                                    <p class="comment">
+                                        I am Reply of above comment.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider-transparent"></div>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <i class="fa fa-user" style="font-size:30px; width:30px;"></i>
+                                </div>
+                                <div class="desc">
+                                    <h5>Martin</h5>
+                                    <p class="date">December 28, 2021at 4:12 pm </p>
+                                    <p class="comment">
+                                        Never say goodbye till the end comes!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reply-btn">
+                                <a href="" class="btn-reply text-uppercase">reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
