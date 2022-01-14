@@ -1,0 +1,186 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: whitesmoke;
+}
+
+header{
+	background: skyblue;
+	height: 66px;
+
+}
+
+header .logo{
+	height: inherit;
+	margin-left: 1em;
+	float: left;
+
+}
+
+header .logo-text{
+	margin: 10px;
+
+
+}
+
+
+.profile{
+	margin: 0 auto;
+	width: 100%;
+}
+
+img{
+	border-radius: 30%;
+	width: 200px;
+}
+
+.profile-container{
+	padding-top: 20px;
+	width: 50%;
+	height: 265px;
+	background-color: beige;
+	border-radius: 50px;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+	position: relative;
+	display: flex;	
+	
+
+}
+
+.profile-container img{
+	height: 200px;
+}
+
+.about-text{
+	padding-left: 20px;
+}
+
+.about-text p{
+	color: darkblue;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+
+.social-icons a{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	background-color: #e6e3e3;
+	margin: 20px 9px;
+	border-radius:50%;
+}
+
+.social-icons{
+	display: flex;
+
+}
+
+.social-icons i{
+	color: #000000;
+	padding: 13px;
+
+}
+
+.social-icons a:hover{
+	background-color: #000000;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+	transition: all ease 0.5s;
+}
+
+.social-icons a:hover i{
+	color: #FFFFFF;
+	transition: all ease 0.5s;
+}
+
+
+.content{
+	width: 90%;
+	margin: 30px auto 30px;
+	
+}
+
+
+.content .main-content{
+	width: 70%;
+	float: left;
+	
+}
+
+.content .main-content .recent-posts{
+	margin: 20px;
+	
+	
+
+}
+
+.content .main-content .posts{
+	width: 95%;
+	margin: 20px auto;
+	position: relative;
+	height: 250px;
+	border-radius: 5px;
+	background: lightgrey;
+	
+}
+
+
+.content .main-content .posts .post-image{
+	width: 35%;
+	height: 100%;
+	float: left;
+	padding-top: 10px;
+}
+
+.content .main-content .posts .post-preview{
+	padding: 0px;
+	width: 60%;
+	float: right;
+
+}
+
+
+.content .sidebar{
+	width: 30%;
+	float: left;
+	border: 1px dashed limegreen;
+	height: 600px;
+}
+
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+
+}
+
+.other-profiles{
+	
+	box-sizing: border-box;
+
+}
+
+.other-profiles h2{
+	padding-left: 20px;
+	font-family: serif;
+}
+
+.admins{
+	float: left;
+	width: 25%;
+	padding: 10px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.other-profiles::after{
+	content: "";
+	display: table;
+	clear: both;
+}
