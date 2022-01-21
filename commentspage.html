@@ -5,39 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--custom_styling-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://use.fontawesome.com/9da9b46707.js"></script>
-    <link rel="stylesheet" href="commentspage.css">
-    <title>Comments</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    </body>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!doctype html>
+    <html lang="en">
+    <!-- custom styling -->
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <title>Comments Page</title>
 </head>
 
 <body>
-    <header>
-        <div class="com">
-            <h1>BLOG COMMENTS</h1>
-            <p>Blogging is not about publishing content but also
+    <div class="commentsSection">
+        <header>
+            <div class="logo">
+                <h1 class="logo-text"><span>Team 02 </span> Blog</h1>
+            </div>
+            <nav>
+                <i class="fa fa-bars menu-toggle"></i>
+                <ul class="nav">
+                    <li><b><a href="index.html">Home</a></b></li>
+                    <li><b><a href="BlogPage.html">Postings</a></b></li>
+                    <li><b><a href="commentspage.html">Comments</a></b></li>
+                </ul>
+            </nav>
+            <a class="cta" href="profile.html"><button>Profiles</button></a>
+        </header>
+        <div class="commetnstop">
+            <h2> COMMENTS </h2>
+
+            <h4>Blogging is not about publishing content but also
                 two way communication and community building
                 aspects behind it.
-            </p>
+            </h4>
         </div>
-    </header>
-    <!--comments Page-->
+
+    </div>
+    <!--comments page tool-->
     <div class="comments_page">
         <!--sub pages for comments-->
         <div class="post_selection">
-            <h3>Leave a comment on:</h3><button>Select Post</button>
+            <h3>Leave a comment on:</h3>
+            <select class="form-control">
+                <option>select the post</option>
+            </select>
             <h3 class="title">Title:</h3>
-            <input type="text" name="title">
+            <input class="form-control form-control-lg" type="text" placeholder="Title of the comment">
             <h3>Your Comment:</h3>
-            <textarea rows="4" cols="50" name="comment" form="usrform">
-              Enter text here...</textarea>
-            <button>Submit</button>
+            <textarea rows="4" class="comment_box" cols="50" name="comment" form="usrform">
+              Enter text here in 150words...</textarea>
+            <p class>
+                <button>
+                    <type="button" class="btn btn-primary btn-lg btn3d">Submit
+                </button>
+            </p>
         </div>
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="comments-area">
@@ -172,7 +213,12 @@
         </div>
 
 
+
+
+
+
     </div>
+
 
 </body>
 
