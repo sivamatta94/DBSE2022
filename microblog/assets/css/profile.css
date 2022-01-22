@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #eae7dc;
+	text-align: center;
+}
+
+.wrapper{
+width: 90%;
+margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #3f3e3b;
+	align-items: center;
+	padding: 20px;
+	height: 66px;
+}
+
+
+
+header .logo {
+	float: left;
+	height: inherit;
+	margin-left: 0.6em;
+	color: #d8c3a5;
+	border: 3px groove;
+	background-color: #3f3e3b;
+	font-style: italic;
+	font-family: initial;
+}
+
+header .logo-text {
+	margin: 10px;
+}
+
+header ul {
+	margin: 0px;
+	list-style: none;
+}
+
+header ul li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+header ul li a {
+	display: block;
+	padding: 21px;
+	font-family: unset;
+	transition: all 0.3s ease 0s;
+	font-size: 1.5em;
+	color: #d8c3a5;
+	text-decoration: none;
+}
+
+header ul li a:hover{
+	background: #67b1be;
+}
+
+button {
+	padding: 9px 30px;
+	background-color: #d8c3a5;
+	border: none;
+	font-size: 1em;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover{
+	background-color: #8e8d8a;
+}
+
+header .menu-toggle {
+	display: none;
+}
+
+
+
+
+
+
+
+.profile{
+	margin: 0 auto;
+	width: 100%;
+}
+
+img{
+	border-radius: 30%;
+	width: 200px;
+}
+
+.profile-container{
+	padding-top: 20px;
+	width: 50%;
+	height: 265px;
+	background-color: #d8c3a5;
+	border-radius: 50px;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+	position: relative;
+	display: flex;	
+	
+
+}
+
+.profile-container img{
+	height: 200px;
+}
+
+.about-text{
+	padding-left: 20px;
+}
+
+.about-text p{
+	color: darkblue;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+
+.social-icons a{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	background-color: #e6e3e3;
+	margin: 20px 9px;
+	border-radius:50%;
+}
+
+.social-icons{
+	display: flex;
+
+}
+
+.social-icons i{
+	color: #000000;
+	padding: 13px;
+
+}
+
+.social-icons a:hover{
+	background-color: #000000;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+	transition: all ease 0.5s;
+}
+
+.social-icons a:hover i{
+	color: #FFFFFF;
+	transition: all ease 0.5s;
+}
+
+
+.content{
+	width: 90%;
+	margin: 30px auto 30px;
+	
+}
+
+
+.content .main-content{
+	width: 70%;
+	float: left;
+	
+}
+
+.content .main-content .recent-posts{
+	margin: 20px;
+	
+	
+
+}
+
+.content .main-content .posts{
+	width: 95%;
+	margin: 20px auto;
+	position: relative;
+	height: 250px;
+	border-radius: 5px;
+	background: lightgrey;
+	
+}
+
+
+.content .main-content .posts .post-image{
+	width: 35%;
+	height: 100%;
+	float: left;
+	padding-top: 10px;
+}
+
+.content .main-content .posts .post-preview{
+	padding: 10px;
+	width: 60%;
+	float: right;
+
+}
+
+
+.content .sidebar{
+	width: 30%;
+	float: left;
+	border: 1px dashed limegreen;
+	height: 600px;
+}
+
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+
+}
+
+.other-profiles{
+	
+	box-sizing: border-box;
+
+}
+
+.other-profiles h2{
+	padding-left: 20px;
+	font-family: serif;
+}
+
+.admins{
+	float: left;
+	padding: 120px;
+	padding-top: 10px;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.other-profiles .admins{
+	
+	position: relative;
+	width: 450px;
+	
+}
+
+.other-profiles .admins img{
+	width: 100%;
+	display: flex;
+	
+}
+
+.three{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	color: darkblue;
+	font-size: 18px;
+
+}
+
+.three a:hover{
+	color: crimson;
+}

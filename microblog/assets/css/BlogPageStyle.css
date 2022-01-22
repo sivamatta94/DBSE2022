@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Quicksand:wght@300;400;500;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: color #eae7dc;;
+}
+
+a {
+    text-decoration: none;
+    
+  }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3f3e3b;
+    align-items: center;
+    padding: 20px;
+    height: 66px;
+}
+
+
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 0.6em;
+    color: #d8c3a5;
+    border: 3px groove;
+    background-color: #3f3e3b;
+    font-style: italic;
+    font-family: initial;
+}
+
+header .logo-text {
+    margin: 10px;
+}
+
+header ul {
+    margin: 0px;
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-family: unset;
+    transition: all 0.3s ease 0s;
+    font-size: 1.5em;
+    color: #d8c3a5;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    background: #67b1be;
+}
+
+button {
+    padding: 9px 30px;
+    background-color: #d8c3a5;
+    border: none;
+    font-size: 1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #67b1be;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+.logo h1{
+    text-align: center;
+    
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.btn{
+    padding: .5rem 1rem;
+    background:#eae7dc ;
+    color: #eae7dc;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-decoration: none;
+}
+.text-input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: solid #3f3e3b;
+    outline: none;
+    color: #3f3e3b;
+    line-height: 1.5rem;
+    font-family: "Lora", serif;
+    font-size: 1.2em;
+}
+
+
+/*CONTENT*/
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+    
+}
+.content .main-content{
+    width: 70%;
+    float:left;   
+}
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: #eae7dc;
+    position: relative;
+}
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #3f3e3b;
+    background: #3f3e3b;
+    border-radius: 0px;
+    color: #eae7dc !important;
+}
+.content .main-content .post .read-more:hover{
+    background: #3d3a35;
+    color: #67b1be !important;
+    transition: .25s;
+}
+.content .main-content .post .post-image{
+    width:40%;
+    height: 100%;
+    float: left;
+}
+.content .main-content .post .post-preview{
+    width: 50%;
+    padding: 10px;
+    float: right;
+}
+.content .main-content .recent-post-title{
+    margin: 20px;
+    color: #3f3e3b;
+}
+.content .sidebar{
+    width: 30%;
+    float: left;
+    height: 300px;
+    
+}
+.content .sidebar .section{
+    background: white;
+    color: #3f3e3b;
+    padding: 20px;
+    border-radius: 5px;
+    margin: bottom 20px;
+}
+.content .sidebar .section .section-title{
+    margin: 10px 0px 10px 0px;
+}
+.content .sidebar .section.search{
+    margin-top: 80px;
+}
+.content .sidebar .section.topics ul{
+margin:0px;
+padding:0px;
+list-style: none;
+color: #3f3e3b;
+border-top: 1px solid #e0e0e0;
+}
+.content .sidebar .section.topics ul li a{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: #3f3e3b;
+    transition: all 0.3s;
+
+}
+.content .sidebar .section.topics ul li a:hover{
+    padding-left: 10px;
+    color: #3f3e3b;
+    transition: all 0.3s;
+}
+.content .sidebar .rectangle{
+    width:500px;
+    height:250px;
+    border:2px solid #3f3e3b;
+    color: #3b3a34;
+}
+.content .sidebar .rectangle .myblog{
+    color: #3f3e3b;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    
+}
+.content .sidebar .rectangle  ul {
+    display: block;
+    color: #3f3e3b;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.content .sidebar .rectangle .manage ul li {
+   margin-top:80px ;
+}
+.content .sidebar .rectangle .manage ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #3d3a35;
+
+    
+}
