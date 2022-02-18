@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 11, 2022 at 03:45 PM
+-- Generation Time: Feb 13, 2022 at 02:33 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -36,17 +36,18 @@ CREATE TABLE `admins` (
   `aheadline` varchar(30) NOT NULL,
   `abio` varchar(500) NOT NULL,
   `aimage` varchar(60) NOT NULL DEFAULT 'avatar.png',
-  `addedby` varchar(30) NOT NULL
+  `addedby` varchar(30) NOT NULL,
+  `usr_flag_admin` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admins`
 --
 
-INSERT INTO `admins` (`id`, `datetime`, `username`, `password`, `aname`, `aheadline`, `abio`, `aimage`, `addedby`) VALUES
-(1, 'January-13-2019 23:54:07', 'siva', '1234', 'Siva Matta', 'Freelancer', 'siva matta is a developer and web designer with the great passion for building beautiful new Desktop/Web Applications from scratch. ', 'jazeb.jpg', 'Zoe333'),
-(2, 'January-13-2019 23:57:13', 'Madhuri', '1234', 'Madhuri Tawde', 'Designer', '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ', 'avatar.png', 'Xerox121'),
-(5, 'January-14-2019 00:20:41', 'Mansi ', '1234', 'Mansi Tripathy', 'Writer', '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 'avatar.png', 'Jazeb');
+INSERT INTO `admins` (`id`, `datetime`, `username`, `password`, `aname`, `aheadline`, `abio`, `aimage`, `addedby`, `usr_flag_admin`) VALUES
+(1, 'January-13-2019 23:54:07', 'siva', '1234', 'Siva Matta', 'Freelancer', 'siva matta is a developer and web designer with the great passion for building beautiful new Desktop/Web Applications from scratch. ', 'jazeb.jpg', 'Zoe333', NULL),
+(2, 'January-13-2019 23:57:13', 'Madhuri', '1234', 'Madhuri Tawde', 'Designer', '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ', 'avatar.png', 'Xerox121', NULL),
+(5, 'January-14-2019 00:20:41', 'Mansi ', '1234', 'Mansi Tripathy', 'Writer', '  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 'avatar.png', 'Jazeb', NULL);
 
 -- --------------------------------------------------------
 
@@ -151,6 +152,26 @@ INSERT INTO `posts` (`id`, `datetime`, `title`, `category`, `author`, `image`, `
 (67, 'February-11-2022 16:01:55', 'A model for assessing blog-based learning systems success', 'Collaboration', 'Mansi ', '', 'Based on previous information systems/educational technology success models, the purpose of this paper is to establish a comprehensive, multidimensional model for assessing blog-based learning systems\' success. Data collected from 240 blog-based learning systems users in the context of higher education was tested against the model using the structural equation modeling approach.'),
 (68, 'February-11-2022 16:19:25', 'Tweeting for learning: A critical analysis of research on microblogging in education ', 'Higher Education', 'Mansi ', 0x646f776e6c6f61642e706e67, 'This study critically analyzed the current body of published research on microblogging in education (MIE) to build a deep and comprehensive understanding of this increasingly popular phenomenon. Twenty-one studies on MIE in 2008–2011 were selected based on the selection criteria and analyzed to answer the following questions: What types of research have been published on  MIE? How was microblogging used for teaching and learning in these studies? What educational benefits did microblogging have on teaching and learning? What suggestions and implications did the current research have for future MIE research and practices?');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(8, 'Pure Coding', 'purecodingofficial@gmail.com', '0139a3c5cf42394be982e766c93f5ed0');
+
 --
 -- Indexes for dumped tables
 --
@@ -187,6 +208,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -194,13 +221,13 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `admins_1`
 --
 ALTER TABLE `admins_1`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -219,6 +246,12 @@ ALTER TABLE `comments`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

@@ -196,3 +196,52 @@ body{
 	margin: 20px 9px;
 	border-radius:50%;
 }
+.footer{
+	background: #8e8d8a;
+	color: #302e2a;
+	height: 300px;
+	position: relative;
+}
+
+.footer .footer-content{
+	display: flex;
+	border: 1px solid #e98074;
+	height: 300px;
+}
+
+.footer .footer-content .footer-section{
+	flex: 1;
+	padding: 20px;
+	border: 1px solid #d8c3a5;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2{
+color: #302e2a;
+}
+
+.footer .footer-content .about h1 span{
+	color: #3d3a35;
+}
+
+
+
+.footer .footer-content .feedback .text-input{
+	background: #302e2a;
+	color: #302e2a;
+	margin-bottom: 10px;
+	line-height: 2rem;
+	width: 60%;
+	padding: .7rem 1.2rem;
+
+}
+
+.footer .footer-content .feedback .text-input:hover{
+	background: #302e2a;
+}
+
+.btn-big{
+	padding: .7rem 1.3rem;
+	line-height: 1.3rem;
+	border-radius: 20px;
+}

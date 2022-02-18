@@ -38,7 +38,7 @@
           <a href="Blog.php?page=1" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About Us</a>
+          <a href="Blog_create_post.php" class="nav-link">Create Post</a>
         </li>
         <li class="nav-item">
           <a href="Blog.php?page=1" class="nav-link">Blog</a>
@@ -46,15 +46,15 @@
         <li class="nav-item">
           <a href="contactus.php" class="nav-link">Contact Us</a>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Features</a>
-        </li>
+       
       </ul>
       <ul class="navbar-nav ml-auto">
         <form class="form-inline d-none d-sm-block" action="Blog.php">
           <div class="form-group">
           <input class="form-control mr-2" type="text" name="Search" placeholder="Search here"value="">
-          <button  class="btn btn-primary" name="SearchButton">Go</button>
+          <button  class="btn btn-primary" name="SearchButton">Go</button> 
+          <li class="nav-item"><a href="Logout.php" class="nav-link text-danger">
+             <i class="fas fa-user-times"></i> Logout</a></li>
           </div>
         </form>
       </ul>
@@ -172,7 +172,7 @@
          </div>
       </div>
     </footer>
-        <div style="height:10px; background:#27aae1;"></div>
+  <div style="height:10px; background:#27aae1;"></div>
     <!-- FOOTER END-->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
