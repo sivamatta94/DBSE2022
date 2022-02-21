@@ -37,7 +37,7 @@
 	<div style="height:10px; background:#27aae1;"></div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a href="Admins.php" class="navbar-brand"> Team02 Blog</a>
+      <a href="Dashboard.php" class="navbar-brand"> Team02 Blog</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapseCMS">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -55,8 +55,7 @@
         <li class="nav-item">
           <a href="contactus.php" class="nav-link">Contact Us</a>
         </li>
-      
-      </ul>
+	   </ul>
       <ul class="navbar-nav ml-auto">
         <form class="form-inline d-none d-sm-block" action="Blog.php">
           <div class="form-group">
@@ -140,20 +139,10 @@
 
 
 			<div class="footer-section feedback">
-				<h2>Submit feedback</h2>
-				<br>
-				<form action="index.html" method="post">
-					<input type="email" name="email" class="text-input" placeholder="Your email address...">
-					<br>
-					<br>
-					<textarea name="message" class="text-input" placeholder="Submit your feedback to us"></textarea>
-					<br>
-					<button type="submit" class="btn btn-big">
-						<i class="fas fa-envelope"></i>
-						Send
-					</button>
-
-				</form>
+				<h3>Submit feedback</h3>
+				<a class="btn btn-primary btn-lg btn-block" href="https://docs.google.com/forms/d/1iq62Nm-jNd-oPT9ocx2GMl9GjWFt7uGUMuNahRFuax8/edit" role="button">Link</a>
+				
+				
 			</div>
 		</div>
 

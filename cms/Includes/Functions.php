@@ -6,7 +6,7 @@ function Redirect_to($New_Location){
 }
 function CheckUserNameExistsOrNot($UserName){
   global $ConnectingDB;
-  $sql    = "SELECT username FROM admins WHERE username=:userName";
+  $sql    = "SELECT username FROM users WHERE username=:userName";
   $stmt   = $ConnectingDB->prepare($sql);
   $stmt->bindValue(':userName',$UserName);
   $stmt->execute();
@@ -19,7 +19,7 @@ function CheckUserNameExistsOrNot($UserName){
 }
 function Login_Attempt($UserName,$Password){
   global $ConnectingDB;
-  $sql = "SELECT * FROM admins WHERE username=:userName AND password=:passWord LIMIT 1";
+  $sql = "SELECT * FROM users WHERE username=:userName AND password=:passWord LIMIT 1";
   $stmt = $ConnectingDB->prepare($sql);
   $stmt->bindValue(':userName',$UserName);
   $stmt->bindValue(':passWord',$Password);
@@ -61,7 +61,7 @@ function TotalCategories(){
 function TotalAdmins(){
 
   global $ConnectingDB;
-  $sql = "SELECT COUNT(*) FROM admins";
+  $sql = "SELECT COUNT(*) FROM  users";
   $stmt = $ConnectingDB->query($sql);
   $TotalRows= $stmt->fetch();
   $TotalAdmins=array_shift($TotalRows);

@@ -1,4 +1,69 @@
-?>
+<?php require_once("Includes/DB.php"); ?>
+<?php require_once("Includes/Functions.php"); ?>
+<?php require_once("Includes/Sessions.php"); ?>
+<?php
+if(isset($_REQUEST["submit"]))
+
+{
+  $Lname           = $_REQUEST["Lname"];
+  $UserName        = $_REQUEST["username"];
+  $fname           = $_REQUEST["fname"];
+  $email           = $_REQUEST["email"];
+  $Password        = $_REQUEST["password"];
+  $ConfirmPassword = $_REQUEST["confirmpassword"];
+ 
+  if(empty($fname)||empty($Lname)||empty($UserName)||empty($email)||empty($Password)||empty($ConfirmPassword)){
+    $_SESSION["ErrorMessage"]= "All fields must be filled out";
+    Redirect_to("register.php");
+  }elseif (strlen($Password)<4) {
+    $_SESSION["ErrorMessage"]= "Password should be greater than 3 characters";
+    Redirect_to("register.php");
+  }elseif ($Password !== $ConfirmPassword) {
+    $_SESSION["ErrorMessage"]= "Password and Confirm Password should match";
+    Redirect_to("register.php");
+  }elseif (CheckUserNameExistsOrNot($UserName)) {
+    $_SESSION["ErrorMessage"]= "Username Exists. Try Another One! ";
+    Redirect_to("register.php");
+  }else{
+    // Query to insert registration in DB When everything is fine
+    //global $ConnectingDB;
+    $sql="INSERT INTO users (fname,Lname,username,email,password)VALUES('$fname','$Lname','$UserName','$email','$Password')";
+    //mysqli_query($ConnectingDB, $sql);
+    $result = $ConnectingDB->query($sql);
+    $_SESSION["SuccessMessage"]="New user is registered Successfully ";
+    Redirect_to("login.php");
+		/*if ($ConnectingDB->query($sql) === TRUE) 
+    //if (!(mysqli_query($ConnectingDB, $sql)))
+   {
+      //echo "New record created successfully";
+      Redirect_to("login.php");
+    } */
+   /* else 
+    {
+       echo "Error: " . $sql . "<br>" . $ConnectingDB->error;
+    }*/
+   /* $sql = "INSERT INTO users(fname,Lname,username,email,password)";
+    $sql .= "VALUES(:fname,:Lname,:username,:email,:password)";
+    $stmt = $ConnectingDB->prepare($sql);
+    $stmt->bindValue(':fname',$fname);
+    $stmt->bindValue(':Lname',$Lname);
+    $stmt->bindValue(':username',$username);
+    $stmt->bindValue(':email',$email);
+    $stmt->bindValue(':password',$Password);
+    $Execute=$stmt->execute();
+    if($Execute){*/
+    /*if (mysqli_num_rows($insert) > 0) {
+      //echo "inserted";
+      $_SESSION["SuccessMessage"]="New user is registeres ";
+      Redirect_to("login.php");
+    }else {
+      //echo "not inserted";
+      $_SESSION["ErrorMessage"]= "Something went wrong. Try Again !";
+      Redirect_to("register.php");
+    }*/
+  }
+} //Ending of Submit Button If-Condition
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +104,10 @@
     <section class="container py-2 mb-4">
     <div class="container">
     <div class="row">
+    <?php
+       echo ErrorMessage();
+       echo SuccessMessage();
+       ?>
         <div class="col-md-6 offset-md-3">
             <div class="signup-form">
                 <form action="" class="mt-5 border p-4 bg-light shadow">
@@ -48,14 +117,13 @@
                             <label>First Name<span class="text-danger">*</span></label>
                             <input type="text" name="fname" class="form-control" placeholder="Enter First Name">
                         </div>
-
                         <div class="mb-3 col-md-6">
                             <label>Last Name<span class="text-danger">*</span></label>
                             <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name">
                         </div>
                         <div class="mb-3 col-md-12">
                             <label>username<span class="text-danger">*</span></label>
-                            <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name">
+                            <input type="text" name="username" class="form-control" placeholder="User Name">
                         </div>
                         <div class="mb-3 col-md-12">
                             <label>Email<span class="text-danger">*</span></label>
@@ -70,7 +138,7 @@
                             <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
                         </div>
                         <div class="col-md-12">
-                           <button class="btn btn-primary float-end">Signup Now</button>
+                           <button class="btn btn-primary float-end" type="submit" name="submit">Signup Now</button>
                         </div>
                     </div>
                 </form>
@@ -79,7 +147,6 @@
         </div>
     </div>
 </div>
-
     </section>
     <!-- Main Area End -->
     <!-- FOOTER -->

@@ -11,6 +11,7 @@ if(isset($_POST["Submit"])){
   $Category  = $_POST["Category"];
   $Image     = $_FILES["Image"]["name"];
   $Target    = "Uploads/".basename($_FILES["Image"]["name"]);
+  //$PostTextMB= $_POST["Microblog"];
   $PostText  = $_POST["PostDescription"];
   $Admin = $_SESSION["UserName"];
   date_default_timezone_set("Europe/Berlin");
@@ -23,8 +24,11 @@ if(isset($_POST["Submit"])){
   }elseif (strlen($PostTitle)<5) {
     $_SESSION["ErrorMessage"]= "Post Title should be greater than 5 characters";
     Redirect_to("Blog_create_post.php");
+  /*}elseif (strlen($PostTextMB)<140) {
+    $_SESSION["ErrorMessage"]= "Post Description should be less than than 140 characters";
+    Redirect_to("Blog_create_post.php");*/
   }elseif (strlen($PostText)>999) {
-    $_SESSION["ErrorMessage"]= "Post Description should be less than than 1000 characters";
+    $_SESSION["ErrorMessage"]= "Post Description should be less than  than 1000 characters";
     Redirect_to("Blog_create_post.php");
   }else{
     // Query to insert Post in DB When everything is fine
@@ -37,11 +41,18 @@ if(isset($_POST["Submit"])){
     $stmt->bindValue(':categoryName',$Category);
     $stmt->bindValue(':adminName',$Admin);
     $stmt->bindValue(':imageName',$Image);
+    //$stmt->bindValue(':Microblog',$PostTextMB);
     $stmt->bindValue(':postDescription',$PostText);
     $Execute=$stmt->execute();
     move_uploaded_file($_FILES["Image"]["tmp_name"],$Target);
     if($Execute){
       $_SESSION["SuccessMessage"]="Post with id : " .$ConnectingDB->lastInsertId()." added Successfully";
+      Redirect_to("Blog_create_post.php");
+    }elseif (strlen($PostText)<140) {
+      $_SESSION["SuccessMessage"]= "Posted added in Microblog";
+      Redirect_to("Blog_create_post.php");
+    }elseif (strlen($PostText)>999) {
+      $_SESSION["SuccessMessage"]= "Post Description should be less than than 1000 characters";
       Redirect_to("Blog_create_post.php");
     }else {
       $_SESSION["ErrorMessage"]= "Something went wrong. Try Again !";
@@ -153,7 +164,7 @@ if(isset($_POST["Submit"])){
             </div>
             <div class="form-group">
               <label for="Post"> <span class="FieldInfo"> Post:Microblog with limited characters </span></label>
-              <textarea class="form-control" id="Post" name="PostDescription" rows="8" cols="40" placeholder="Type post text here in 140 characters"></textarea>
+              <textarea class="form-control" id="Post" name="Microblog" rows="8" cols="40" placeholder="Type post text here in 140 characters"></textarea>
             </div>
             <div class="form-group">
               <label for="Post"> <span class="FieldInfo"> Post:Blog with unlimited characters </span></label>

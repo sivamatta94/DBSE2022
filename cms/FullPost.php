@@ -77,9 +77,6 @@ if(isset($_POST["Submit"])){
           <a href="Blog.php?page=1" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About Us</a>
-        </li>
-        <li class="nav-item">
           <a href="Blog.php?page=1" class="nav-link">Blog</a>
         </li>
         <li class="nav-item">

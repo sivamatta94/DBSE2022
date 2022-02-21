@@ -11,6 +11,7 @@ if (isset($_POST["Submit"])) {
   $Password = $_POST["Password"];
   if (empty($UserName)||empty($Password)) {
     $_SESSION["ErrorMessage"]= "All fields must be filled out";
+    //echo "ALL fields must be Filled Out";
     Redirect_to("Login.php");
   }else {
     // code for checking username and password from Database
@@ -18,9 +19,8 @@ if (isset($_POST["Submit"])) {
     if ($Found_Account) {
       $_SESSION["UserId"]=$Found_Account["id"];
       $_SESSION["UserName"]=$Found_Account["username"];
-      $_SESSION["AdminName"]=$Found_Account["aname"];
-      $_SESSION["SuccessMessage"]= "Wellcome ".$_SESSION["AdminName"]."!";
-      if (isset($_SESSION["TrackingURL"])) {
+      $_SESSION["AdminName"]=$Found_Account["aname"];  
+     if (isset($_SESSION["TrackingURL"])) {
         Redirect_to($_SESSION["TrackingURL"]);
       }else{
       Redirect_to("home.php");

@@ -40,9 +40,6 @@ Confirm_Login(); ?>
           <a href="Categories.php" class="nav-link">Categories</a>
         </li>
         <li class="nav-item">
-          <a href="Admins.php" class="nav-link">Manage Admins</a>
-        </li>
-        <li class="nav-item">
           <a href="Comments.php" class="nav-link">Comments</a>
         </li>
         <li class="nav-item">
@@ -73,11 +70,6 @@ Confirm_Login(); ?>
           <div class="col-lg-3 mb-2">
             <a href="Categories.php" class="btn btn-info btn-block">
               <i class="fas fa-folder-plus"></i> Add New Category
-            </a>
-          </div>
-          <div class="col-lg-3 mb-2">
-            <a href="Admins.php" class="btn btn-warning btn-block">
-              <i class="fas fa-user-plus"></i> Add New Admin
             </a>
           </div>
           <div class="col-lg-3 mb-2">

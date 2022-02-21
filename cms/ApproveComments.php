@@ -5,7 +5,7 @@
 if(isset($_GET["id"])){
   $SearchQueryParameter = $_GET["id"];
   global $ConnectingDB;
-  $Admin = $_SESSION["AdminName"];
+  $Admin = $_SESSION["username"];
   $sql = "UPDATE comments SET status='ON', approvedby='$Admin' WHERE id='$SearchQueryParameter'";
   $Execute = $ConnectingDB->query($sql);
   if ($Execute) {

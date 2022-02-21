@@ -83,9 +83,6 @@ if(isset($_POST["Submit"])){
           <a href="Categories.php" class="nav-link">Categories</a>
         </li>
         <li class="nav-item">
-          <a href="Admins.php" class="nav-link">Manage Admins</a>
-        </li>
-        <li class="nav-item">
           <a href="Comments.php" class="nav-link">Comments</a>
         </li>
         <li class="nav-item">
@@ -129,7 +126,7 @@ if(isset($_POST["Submit"])){
                <input class="form-control" type="text" name="PostTitle" id="title" placeholder="Type title here" value="">
             </div>
             <div class="form-group">
-              <label for="CategoryTitle"> <span class="FieldInfo"> Chose Categroy </span></label>
+              <label for="CategoryTitle"> <span class="FieldInfo"> Chose Category </span></label>
                <select class="form-control" id="CategoryTitle"  name="Category">
                  <?php
                  //Fetchinng all the categories from category table
@@ -151,8 +148,12 @@ if(isset($_POST["Submit"])){
               </div>
             </div>
             <div class="form-group">
-              <label for="Post"> <span class="FieldInfo"> Post: </span></label>
-              <textarea class="form-control" id="Post" name="PostDescription" rows="8" cols="80"></textarea>
+              <label for="Post"> <span class="FieldInfo"> Post:Microblog with limited characters </span></label>
+              <textarea class="form-control" id="Post" name="PostDescription" rows="8" cols="40" placeholder="Type post text here in 140 characters"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="Post"> <span class="FieldInfo"> Post:Blog with unlimited characters </span></label>
+              <textarea class="form-control" id="Post" name="PostDescription" rows="8" cols="80" placeholder="Type post text here in 1000characters"></textarea>
             </div>
             <div class="row">
               <div class="col-lg-6 mb-2">
